@@ -25,11 +25,6 @@ getent passwd vertx >/dev/null || useradd -r -g vertx -s /sbin/nologin -c "Vert.
 exit 0
 
 %prep 
-rm -rf $RPM_SOURCE_DIR/%{_base}-%{version}
-rm -rf $RPM_SOURCE_DIR/%{_base}-%{version}.tar.gz
-pushd $RPM_SOURCE_DIR 
-[ -f %{_hash}?filename=%{_base}-%{version}.tar.gz ] && mv %{_hash}?filename=%{_base}-%{version}.tar.gz %{_base}-%{version}.tar.gz
-popd 
 
 %build 
 pushd $RPM_SOURCE_DIR 
@@ -61,6 +56,8 @@ rm -rf $RPM_SOURCE_DIR/%{_base}-%{version}
 %{_prefix}/%{_base} 
 
 %changelog 
+* Wed Dec 10 2014 Anssi Etelaniemi <aetelani@hotmail.com>
+- Rmevoed source file renaming and delete
 * Thu Jan 09 2014 Fernando Jordan <fjordansilva@gmail.com>
 - Added vertx user and group to the system.
 * Wed Dec 11 2013 Fernando Jordan <fjordansilva@gmail.com>
