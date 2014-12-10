@@ -2,7 +2,7 @@
 %define _hash f880cb78b116f27c303021d2eaa8e6fd00c2850b
 
 Name: %{_base} 
-Version: 2.1M3 
+Version: 2.1M5 
 Release: 1%{?dist} 
 Summary: Vert.x is a server-side Java environment that uses an asynchronous event-driven model. 
 Packager: Fernando Jordan Silva <fjordan@aubay.es> 
@@ -56,6 +56,8 @@ rm -rf $RPM_SOURCE_DIR/%{_base}-%{version}
 %{_prefix}/%{_base} 
 
 %changelog 
+* Wed Dec 10 2014 Anssi Etelaniemi <aetelani@hotmail.com>
+- Updated vertx version
 * Wed Dec 10 2014 Anssi Etelaniemi <aetelani@hotmail.com>
 - Rmevoed source file renaming and delete
 * Thu Jan 09 2014 Fernando Jordan <fjordansilva@gmail.com>
